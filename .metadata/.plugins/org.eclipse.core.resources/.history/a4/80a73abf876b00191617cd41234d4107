@@ -1,0 +1,18 @@
+
+public class Question {
+	private int questionNum;
+	private String question;
+	private String ansA;
+	private String ansB;
+	private String ansC;
+	private String ansD;
+	
+	public Question(int qNum, String q, String a, String b, String c, String d) {
+		questionNum = qNum;
+		question = q;
+		ansA = a;
+		ansB = b;
+		ansC = c;
+		ansD = d;
+	}
+}

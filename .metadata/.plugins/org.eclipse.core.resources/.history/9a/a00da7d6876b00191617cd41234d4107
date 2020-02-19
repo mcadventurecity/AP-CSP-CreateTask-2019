@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class QuizGame {
+	ArrayList<Question> mathQs = new ArrayList<Question>();
+	ArrayList<Question> histQs = new ArrayList<Question>();
+	
+	public static void displayQuestions() {
+		
+	}
+	public static String selectCategory(String select) {
+		if(select.equals("M")) {
+			return "You selected Math";
+		} else if (select.equals("H")) {
+			return "You selected History";
+		} else {
+			return "Invalid Category.";
+		}
+		
+	}
+	public static void main(String[] args) {
+		String directions = "Select a category below.\nEach Category has five questions, and your score will be displayed at the end.";
+		System.out.println(directions);
+		System.out.println("Math\tHistory\nEnter M for math or H for history.");
+		Scanner categoryInput = new Scanner(System.in);
+		String category = categoryInput.nextLine().toUpperCase();
+		selectCategory(category);
+		System.out.println(selectCategory(category));
+		categoryInput.close();
+	}
+
+}
